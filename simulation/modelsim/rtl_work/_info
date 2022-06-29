@@ -1,0 +1,228 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/simulation/modelsim
+vlab_project_TB
+!s110 1622694849
+!i10b 1
+!s100 60c2]HI?[HlO8e5]EDoC]0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ISm6[e85UGB8VR74i5WTfS3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1622694803
+8D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/lab_project_TB.v
+FD:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/lab_project_TB.v
+!i122 8
+L0 3 56
+Z3 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1622694848.000000
+!s107 D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/lab_project_TB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602|D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/lab_project_TB.v|
+!i113 1
+Z4 o-vlog01compat -work work
+Z5 !s92 -vlog01compat -work work {+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602}
+Z6 tCvgOpt 0
+nlab_project_@t@b
+vmyalu
+!s110 1622694850
+!i10b 1
+!s100 Bb_8c[kKHB;zGi]]mOUaX3
+R1
+IgAj373i`LZc2cfJc<5Kh23
+R2
+R0
+w1622688724
+8D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myalu.v
+FD:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myalu.v
+!i122 9
+L0 1 13
+R3
+r1
+!s85 0
+31
+!s108 1622694849.000000
+!s107 D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myalu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602|D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myalu.v|
+!i113 1
+R4
+R5
+R6
+vmydatapath
+!s110 1622694851
+!i10b 1
+!s100 ^k5HM;iSR6YaQEV7nZzQ;0
+R1
+IBRDJQzb5<KIK9gLjjfUM;3
+R2
+R0
+w1622694701
+8D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v
+FD:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v
+!i122 10
+L0 1 64
+R3
+r1
+!s85 0
+31
+!s108 1622694850.000000
+!s107 D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602|D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v|
+!i113 1
+R4
+R5
+R6
+vmyfsm
+!s110 1622694855
+!i10b 1
+!s100 f;;MnQfY3lN8@Fz_H@4`Y3
+R1
+IbYW@F`8PWmZO5bT]FAWP03
+R2
+R0
+w1622694693
+8D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v
+FD:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v
+!i122 14
+L0 1 1421
+R3
+r1
+!s85 0
+31
+!s108 1622694854.000000
+!s107 D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602|D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v|
+!i113 1
+R4
+R5
+R6
+vmyreg
+!s110 1622694854
+!i10b 1
+!s100 z0V4R;hGh?z6e7HG^UfkJ1
+R1
+Icm7@kOCXK4fR=QH2dJbJ;0
+R2
+R0
+w1622688696
+8D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myreg.v
+FD:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myreg.v
+!i122 13
+L0 1 10
+R3
+r1
+!s85 0
+31
+!s108 1622694853.000000
+!s107 D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myreg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602|D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myreg.v|
+!i113 1
+R4
+R5
+R6
+vmyxor
+!s110 1622694853
+!i10b 1
+!s100 ;`4;`ONM;65CXW5_j8VXY1
+R1
+I[JmCRGW;2[FInB4ieIJBV3
+R2
+R0
+w1622688720
+8D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myxor.v
+FD:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myxor.v
+!i122 12
+L0 1 9
+R3
+r1
+!s85 0
+31
+!s108 1622694852.000000
+!s107 D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myxor.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602|D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myxor.v|
+!i113 1
+R4
+R5
+R6
+vnext_state
+!s110 1622694840
+!i10b 1
+!s100 E_Nn4k41jCm69J_R9n:e[1
+R1
+I[7_h@<VZ28m3jhdjH>SkD1
+R2
+R0
+w1622617248
+8D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/next_state.v
+FD:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/next_state.v
+!i122 0
+L0 1 14
+R3
+r1
+!s85 0
+31
+!s108 1622694840.000000
+!s107 D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/next_state.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602|D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/next_state.v|
+!i113 1
+R4
+R5
+R6
+vtribuf
+!s110 1622694852
+!i10b 1
+!s100 h5lS5id<oE9ko8h=ldX6H3
+R1
+I;WN2N3XCX1kXVecj:Ba>Q0
+R2
+R0
+w1622694026
+8D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/tribuf.v
+FD:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/tribuf.v
+!i122 11
+Z7 L0 1 12
+R3
+r1
+!s85 0
+31
+!s108 1622694851.000000
+!s107 D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/tribuf.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602|D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/tribuf.v|
+!i113 1
+R4
+R5
+R6
+vtwo_bit_reg
+!s110 1622694848
+!i10b 1
+!s100 WG>zhPMm?FH5X3zc[QReb1
+R1
+InbmRPE][6_4NbdDkB=lnP0
+R2
+R0
+w1622611134
+8D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/one_bit_reg.v
+FD:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/one_bit_reg.v
+!i122 7
+R7
+R3
+r1
+!s85 0
+31
+!s108 1622694847.000000
+!s107 D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/one_bit_reg.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602|D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/one_bit_reg.v|
+!i113 1
+R4
+R5
+R6

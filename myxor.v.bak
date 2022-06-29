@@ -1,0 +1,10 @@
+module myxor(x, y, enable, z);
+   input [2:0] x, y;
+	input enable;
+	output [2:0] z;
+	
+	always @(x or y) begin
+	   if (enable == 1'b1)
+	      z = x ^ y;
+		end
+endmodule 

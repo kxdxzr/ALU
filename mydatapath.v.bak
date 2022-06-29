@@ -1,0 +1,34 @@
+module mydatapath (clk,data,function_code);
+	input clk;
+	input [2:0] data;
+	input [5:0] function_code;
+	wire [2:0] bus, alu_input1,alu_out, G_out;
+	wire [1:0]r0, r1, r2,G;
+	//r0 = R0inR0out r1 = ...
+	//G = GinGout
+	wire Ain, addSub,extern;
+	// Gout is the enable of tri_buf, G_out is the output of register G.
+	
+	//implement the FSM
+	myfsm fsm (.function_code(function_code), .data(data),.extern(extern),.r0(r0), .r1(r1), .r2(r2),.G(G),.a_en(Ain), .addsub(addSub));
+	
+	// implement the data input tri-buffer
+	tribuf datatri (.a(data),.b(bus),.enable(extern));
+	
+	//implement the R0,R1,R2 with their own tri-buffer
+	myreg R0 (.x(bus), .clk(clk), .enable(r0[0]), .y(R0_out));
+	tribuf R0tri (.a(R0_out),.b(bus),.enable(r0[1]));
+	myreg R1 (.x(bus), .clk(clk), .enable(r1[0]), .y(R1_out));
+	tribuf R1tri (.a(R1_out),.b(bus),.enable(r1[1]));
+	myreg R2 (.x(bus), .clk(clk), .enable(r2[0]), .y(R2_out));
+	tribuf R2tri (.a(R2_out),.b(bus),.enable(r2[1]));
+	
+	// implement the ALU part
+	myreg A_reg (.x(bus), .clk(clk), .enable(Ain), .y(alu_input1));
+	myalu myALU (.p(alu_inpu1),.q(bus),.addsub(addSub),.r(alu_out));
+	myreg G_reg (.x(alu_out), .clk(clk), .enable(G[0]), .y(G_out));
+	tribuf mytri (.a(G_out),.b(bus),.enable(G[1]));
+	
+	// implement the xor part
+	
+endmodule

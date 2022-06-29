@@ -1,0 +1,65 @@
+module myfsm (function_code, data,extern,r0, r1, r2,G,a_en, addsub);
+	input [5:0] function_code;
+	// first two bits:
+	//00 load
+	//01 mov
+	//10 add
+	//11 xor
+	// second and third is the index of R
+	//00 R0
+	//01 R1
+	//10 R2
+	
+	//e.g. MOV R0 R1 = 010001
+	//e.g. load R0 value = 0000, the load value is an individual input for the finite-state machine
+	
+	input [2:0] data;
+	output reg extern, a_en, addsub;
+	output reg [1:0]r0, r1, r2,G; //r0 = R0inR0out r1 = ...
+	
+	always @(function_code) begin
+		case (function_code)
+		//load
+		//load to R0
+		6'b000000: begin extern <=1; r0=2'b10;r1=2'b00;r2=2'b00;G=2'b00;a_en=0;addsub=0;end
+		//load to R1
+		6'b000100: begin extern <=1; r0=2'b00;r1=2'b10;r2=2'b00;G=2'b00;a_en=0;addsub=0;end
+		//load to R2
+		6'b001000: begin extern <=1; r0=2'b00;r1=2'b00;r2=2'b10;G=2'b00;a_en=0;addsub=0;end
+		
+		//move
+		//load others to R0
+		6'b010001: begin extern <=0; r0=2'b10;r1=2'b01;r2=2'b00;G=2'b00;a_en=0;addsub=0;end
+		6'b010010: begin extern <=0; r0=2'b10;r1=2'b00;r2=2'b01;G=2'b00;a_en=0;addsub=0;end
+		//load others to R1
+		6'b010100: begin extern <=0; r0=2'b01;r1=2'b10;r2=2'b00;G=2'b00;a_en=0;addsub=0;end
+		6'b010110: begin extern <=0; r0=2'b00;r1=2'b10;r2=2'b10;G=2'b00;a_en=0;addsub=0;end
+		//load others to R2
+		6'b011000: begin extern <=0; r0=2'b01;r1=2'b00;r2=2'b10;G=2'b00;a_en=0;addsub=0;end
+		6'b011001: begin extern <=0; r0=2'b00;r1=2'b01;r2=2'b10;G=2'b00;a_en=0;addsub=0;end
+		
+		//add
+		//add to R0
+		6'b100001: begin extern <=0; r0=2'b11;r1=2'b01;r2=2'b00;G=2'b11;a_en=1;addsub=0;end
+		6'b100010: begin extern <=0; r0=2'b11;r1=2'b00;r2=2'b01;G=2'b11;a_en=1;addsub=0;end
+		//add to R1
+		6'b100100: begin extern <=0; r0=2'b01;r1=2'b11;r2=2'b00;G=2'b11;a_en=1;addsub=0;end
+		6'b100110: begin extern <=0; r0=2'b00;r1=2'b11;r2=2'b01;G=2'b11;a_en=1;addsub=0;end
+		//add to R2
+		6'b101000: begin extern <=0; r0=2'b01;r1=2'b00;r2=2'b11;G=2'b11;a_en=1;addsub=0;end
+		6'b101001: begin extern <=0; r0=2'b00;r1=2'b01;r2=2'b11;G=2'b11;a_en=1;addsub=0;end
+		
+		//xor
+		//xor to R0
+		6'b110001: begin extern <=0; r0=2'b11;r1=2'b01;r2=2'b00;G=2'b00;a_en=0;addsub=0;end
+		6'b110010: begin extern <=0; r0=2'b11;r1=2'b00;r2=2'b01;G=2'b00;a_en=0;addsub=0;end
+		//xor to R1
+		6'b110100: begin extern <=0; r0=2'b01;r1=2'b11;r2=2'b00;G=2'b00;a_en=0;addsub=0;end
+		6'b110110: begin extern <=0; r0=2'b00;r1=2'b11;r2=2'b01;G=2'b00;a_en=0;addsub=0;end
+		//xor to R2
+		6'b111000: begin extern <=0; r0=2'b01;r1=2'b00;r2=2'b11;G=2'b00;a_en=0;addsub=0;end
+		6'b111001: begin extern <=0; r0=2'b00;r1=2'b01;r2=2'b11;G=2'b00;a_en=0;addsub=0;end
+		endcase
+		end
+		
+endmodule

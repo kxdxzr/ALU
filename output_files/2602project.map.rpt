@@ -1,0 +1,710 @@
+Analysis & Elaboration report for 2602project
+Thu Jun 03 11:50:18 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Port Connectivity Checks: "tribuf:H_tri"
+  6. Port Connectivity Checks: "myreg:H_reg"
+  7. Port Connectivity Checks: "myxor:myxor"
+  8. Port Connectivity Checks: "myreg:B_reg"
+  9. Port Connectivity Checks: "tribuf:G_tri"
+ 10. Port Connectivity Checks: "myreg:G_reg"
+ 11. Port Connectivity Checks: "myalu:myALU"
+ 12. Port Connectivity Checks: "myreg:A_reg"
+ 13. Port Connectivity Checks: "tribuf:R7tri"
+ 14. Port Connectivity Checks: "myreg:R7"
+ 15. Port Connectivity Checks: "tribuf:R6tri"
+ 16. Port Connectivity Checks: "myreg:R6"
+ 17. Port Connectivity Checks: "tribuf:R5tri"
+ 18. Port Connectivity Checks: "myreg:R5"
+ 19. Port Connectivity Checks: "tribuf:R4tri"
+ 20. Port Connectivity Checks: "myreg:R4"
+ 21. Port Connectivity Checks: "tribuf:R3tri"
+ 22. Port Connectivity Checks: "myreg:R3"
+ 23. Port Connectivity Checks: "tribuf:R2tri"
+ 24. Port Connectivity Checks: "myreg:R2"
+ 25. Port Connectivity Checks: "tribuf:R1tri"
+ 26. Port Connectivity Checks: "myreg:R1"
+ 27. Port Connectivity Checks: "tribuf:R0tri"
+ 28. Port Connectivity Checks: "myreg:R0"
+ 29. Port Connectivity Checks: "tribuf:datatri"
+ 30. Analysis & Elaboration Messages
+ 31. Analysis & Elaboration Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                              ;
++-------------------------------+---------------------------------------------+
+; Analysis & Elaboration Status ; Successful - Thu Jun 03 11:50:18 2021       ;
+; Quartus Prime Version         ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                 ; 2602project                                 ;
+; Top-level Entity Name         ; mydatapath                                  ;
+; Family                        ; Cyclone V                                   ;
+; Logic utilization (in ALMs)   ; N/A until Partition Merge                   ;
+; Total registers               ; N/A until Partition Merge                   ;
+; Total pins                    ; N/A until Partition Merge                   ;
+; Total virtual pins            ; N/A until Partition Merge                   ;
+; Total block memory bits       ; N/A until Partition Merge                   ;
+; Total PLLs                    ; N/A until Partition Merge                   ;
+; Total DLLs                    ; N/A until Partition Merge                   ;
++-------------------------------+---------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                           ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; mydatapath         ; 2602project        ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tribuf:H_tri"                                                                                                                               ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..3]" will be connected to GND. ;
+; b    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "b[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "myreg:H_reg"                                                                                                                                ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; x    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "x[15..3]" will be connected to GND. ;
+; y    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "y[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "myxor:myxor"                                                                                                                                   ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                                      ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; x      ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "x[15..3]" will be connected to GND.  ;
+; y      ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "y[15..3]" will be connected to GND.  ;
+; z      ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "z[15..3]" have no fanouts                       ;
+; enable ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
++--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "myreg:B_reg"                                                                                                                                ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; x    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "x[15..3]" will be connected to GND. ;
+; y    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "y[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tribuf:G_tri"                                                                                                                               ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..3]" will be connected to GND. ;
+; b    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "b[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "myreg:G_reg"                                                                                                                                ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; x    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "x[15..3]" will be connected to GND. ;
+; y    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "y[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "myalu:myALU"                                                                                                                                ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; p    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "p[15..3]" will be connected to GND. ;
+; q    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "q[15..3]" will be connected to GND. ;
+; r    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "r[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "myreg:A_reg"                                                                                                                                ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; x    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "x[15..3]" will be connected to GND. ;
+; y    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "y[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tribuf:R7tri"                                                                                                                               ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..3]" will be connected to GND. ;
+; b    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "b[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "myreg:R7"                                                                                                                                   ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; x    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "x[15..3]" will be connected to GND. ;
+; y    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "y[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tribuf:R6tri"                                                                                                                               ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..3]" will be connected to GND. ;
+; b    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "b[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "myreg:R6"                                                                                                                                   ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; x    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "x[15..3]" will be connected to GND. ;
+; y    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "y[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tribuf:R5tri"                                                                                                                               ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..3]" will be connected to GND. ;
+; b    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "b[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "myreg:R5"                                                                                                                                   ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; x    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "x[15..3]" will be connected to GND. ;
+; y    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "y[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tribuf:R4tri"                                                                                                                               ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..3]" will be connected to GND. ;
+; b    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "b[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "myreg:R4"                                                                                                                                   ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; x    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "x[15..3]" will be connected to GND. ;
+; y    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "y[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tribuf:R3tri"                                                                                                                               ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..3]" will be connected to GND. ;
+; b    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "b[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "myreg:R3"                                                                                                                                   ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; x    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "x[15..3]" will be connected to GND. ;
+; y    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "y[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tribuf:R2tri"                                                                                                                               ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..3]" will be connected to GND. ;
+; b    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "b[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "myreg:R2"                                                                                                                                   ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; x    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "x[15..3]" will be connected to GND. ;
+; y    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "y[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tribuf:R1tri"                                                                                                                               ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..3]" will be connected to GND. ;
+; b    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "b[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "myreg:R1"                                                                                                                                   ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; x    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "x[15..3]" will be connected to GND. ;
+; y    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "y[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tribuf:R0tri"                                                                                                                               ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; a    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "a[15..3]" will be connected to GND. ;
+; b    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "b[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "myreg:R0"                                                                                                                                   ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                     ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; x    ; Input  ; Warning  ; Input port expression (3 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "x[15..3]" will be connected to GND. ;
+; y    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "y[15..3]" have no fanouts                      ;
++------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "tribuf:datatri"                                                                                                        ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
+; b    ; Output ; Warning  ; Output or bidir port (16 bits) is wider than the port expression (3 bits) it drives; bit(s) "b[15..3]" have no fanouts ;
++------+--------+----------+------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Elaboration
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Jun 03 11:49:59 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off myproject -c 2602project --analysis_and_elaboration
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file next_state.v
+    Info (12023): Found entity 1: next_state File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/next_state.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file myxor.v
+    Info (12023): Found entity 1: myxor File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myxor.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file myreg.v
+    Info (12023): Found entity 1: myreg File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myreg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file myalu.v
+    Info (12023): Found entity 1: myalu File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myalu.v Line: 1
+Warning (12090): Entity "tribuf" obtained from "tribuf.v" instead of from Quartus Prime megafunction library File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/tribuf.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tribuf.v
+    Info (12023): Found entity 1: tribuf File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/tribuf.v Line: 1
+Warning (10463): Verilog HDL Declaration warning at myfsm.v(24): "extern" is SystemVerilog-2005 keyword File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file myfsm.v
+    Info (12023): Found entity 1: myfsm File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1
+Warning (10463): Verilog HDL Declaration warning at mydatapath.v(9): "extern" is SystemVerilog-2005 keyword File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file mydatapath.v
+    Info (12023): Found entity 1: mydatapath File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file lab_project_tb.v
+    Info (12023): Found entity 1: lab_project_TB File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/lab_project_TB.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file one_bit_reg.v
+    Info (12023): Found entity 1: two_bit_reg File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/one_bit_reg.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file question_7_tb.v
+    Info (12023): Found entity 1: question_7_TB File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/question_7_TB.v Line: 3
+Info (12127): Elaborating entity "mydatapath" for the top level hierarchy
+Info (12128): Elaborating entity "myfsm" for hierarchy "myfsm:fsm" File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v Line: 17
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(32): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 32
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(40): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 40
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(48): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 48
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(55): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 55
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(63): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 63
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(71): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 71
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(79): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 79
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(87): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 87
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(96): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 96
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(103): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 103
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(110): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 110
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(117): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 117
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(124): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 124
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(131): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 131
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(138): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 138
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(146): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 146
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(153): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 153
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(160): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 160
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(167): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 167
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(174): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 174
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(181): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 181
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(188): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 188
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(196): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 196
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(203): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 203
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(210): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 210
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(217): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 217
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(224): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 224
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(231): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 231
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(238): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 238
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(247): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 247
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(254): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 254
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(261): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 261
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(268): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 268
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(275): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 275
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(282): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 282
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(289): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 289
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(298): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 298
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(305): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 305
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(312): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 312
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(319): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 319
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(326): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 326
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(333): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 333
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(340): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 340
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(348): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 348
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(355): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 355
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(362): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 362
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(369): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 369
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(376): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 376
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(383): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 383
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(390): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 390
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(398): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 398
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(405): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 405
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(412): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 412
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(419): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 419
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(426): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 426
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(433): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 433
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(440): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 440
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(448): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 448
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(455): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 455
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(462): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 462
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(469): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 469
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(476): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 476
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(483): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 483
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(490): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 490
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(499): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 499
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(508): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 508
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(517): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 517
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(526): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 526
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(535): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 535
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(543): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 543
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(551): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 551
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(559): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 559
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(568): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 568
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(576): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 576
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(584): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 584
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(592): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 592
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(600): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 600
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(608): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 608
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(617): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 617
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(626): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 626
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(634): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 634
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(642): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 642
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(650): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 650
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(658): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 658
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(666): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 666
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(674): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 674
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(682): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 682
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(690): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 690
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(698): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 698
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(706): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 706
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(714): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 714
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(722): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 722
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(730): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 730
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(738): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 738
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(746): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 746
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(754): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 754
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(762): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 762
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(770): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 770
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(778): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 778
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(786): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 786
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(794): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 794
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(802): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 802
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(810): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 810
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(818): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 818
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(826): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 826
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(835): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 835
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(843): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 843
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(851): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 851
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(859): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 859
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(868): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 868
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(876): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 876
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(884): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 884
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(892): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 892
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(901): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 901
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(910): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 910
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(919): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 919
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(928): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 928
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(937): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 937
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(946): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 946
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(954): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 954
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(964): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 964
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(973): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 973
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(982): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 982
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(990): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 990
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(999): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 999
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1008): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1008
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1017): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1017
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1026): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1026
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1034): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1034
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1042): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1042
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1050): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1050
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1058): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1058
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1066): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1066
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1074): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1074
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1083): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1083
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1091): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1091
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1099): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1099
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1107): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1107
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1115): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1115
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1123): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1123
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1131): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1131
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1139): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1139
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1147): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1147
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1155): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1155
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1163): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1163
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1171): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1171
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1179): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1179
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1187): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1187
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1195): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1195
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1203): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1203
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1211): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1211
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1219): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1219
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1227): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1227
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1235): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1235
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1243): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1243
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1251): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1251
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1259): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1259
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1267): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1267
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1275): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1275
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1283): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1283
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1291): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1291
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1299): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1299
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1307): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1307
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1315): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1315
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1323): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1323
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1331): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1331
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1339): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1339
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1347): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1347
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1355): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1355
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1363): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1363
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1371): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1371
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1379): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1379
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1387): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1387
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1395): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1395
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1403): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1403
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(1411): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 1411
+Warning (10270): Verilog HDL Case Statement warning at myfsm.v(28): incomplete case statement has no default case item File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 28
+Warning (10240): Verilog HDL Always Construct warning at myfsm.v(27): inferring latch(es) for variable "extern", which holds its previous value in one or more paths through the always construct File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at myfsm.v(27): inferring latch(es) for variable "r0", which holds its previous value in one or more paths through the always construct File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at myfsm.v(27): inferring latch(es) for variable "r1", which holds its previous value in one or more paths through the always construct File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at myfsm.v(27): inferring latch(es) for variable "r2", which holds its previous value in one or more paths through the always construct File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at myfsm.v(27): inferring latch(es) for variable "r3", which holds its previous value in one or more paths through the always construct File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at myfsm.v(27): inferring latch(es) for variable "r4", which holds its previous value in one or more paths through the always construct File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at myfsm.v(27): inferring latch(es) for variable "r5", which holds its previous value in one or more paths through the always construct File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at myfsm.v(27): inferring latch(es) for variable "r6", which holds its previous value in one or more paths through the always construct File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at myfsm.v(27): inferring latch(es) for variable "r7", which holds its previous value in one or more paths through the always construct File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at myfsm.v(27): inferring latch(es) for variable "G", which holds its previous value in one or more paths through the always construct File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at myfsm.v(27): inferring latch(es) for variable "H", which holds its previous value in one or more paths through the always construct File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at myfsm.v(27): inferring latch(es) for variable "a_en", which holds its previous value in one or more paths through the always construct File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at myfsm.v(27): inferring latch(es) for variable "addsub", which holds its previous value in one or more paths through the always construct File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at myfsm.v(27): inferring latch(es) for variable "x_en", which holds its previous value in one or more paths through the always construct File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Warning (10240): Verilog HDL Always Construct warning at myfsm.v(27): inferring latch(es) for variable "rst", which holds its previous value in one or more paths through the always construct File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "rst" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "x_en" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "addsub" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "a_en" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "H[0]" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "H[1]" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "G[0]" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "G[1]" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "r7[0]" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "r7[1]" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "r6[0]" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "r6[1]" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "r5[0]" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "r5[1]" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "r4[0]" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "r4[1]" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "r3[0]" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "r3[1]" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "r2[0]" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "r2[1]" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "r1[0]" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "r1[1]" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "r0[0]" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "r0[1]" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (10041): Inferred latch for "extern" at myfsm.v(27) File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v Line: 27
+Info (12128): Elaborating entity "next_state" for hierarchy "next_state:n1" File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v Line: 19
+Info (12128): Elaborating entity "two_bit_reg" for hierarchy "two_bit_reg:reg1" File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v Line: 20
+Info (12128): Elaborating entity "tribuf" for hierarchy "tribuf:datatri" File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v Line: 22
+Warning (10240): Verilog HDL Always Construct warning at tribuf.v(6): inferring latch(es) for variable "b", which holds its previous value in one or more paths through the always construct File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/tribuf.v Line: 6
+Info (12128): Elaborating entity "myreg" for hierarchy "myreg:R0" File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v Line: 27
+Info (12128): Elaborating entity "myalu" for hierarchy "myalu:myALU" File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v Line: 55
+Warning (10240): Verilog HDL Always Construct warning at myalu.v(6): inferring latch(es) for variable "r", which holds its previous value in one or more paths through the always construct File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myalu.v Line: 6
+Info (12128): Elaborating entity "myxor" for hierarchy "myxor:myxor" File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v Line: 61
+Warning (12241): 25 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (144001): Generated suppressed messages file D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/output_files/2602project.map.smsg
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 199 warnings
+    Info: Peak virtual memory: 4776 megabytes
+    Info: Processing ended: Thu Jun 03 11:50:18 2021
+    Info: Elapsed time: 00:00:19
+    Info: Total CPU time (on all processors): 00:00:40
+
+
++--------------------------------------------+
+; Analysis & Elaboration Suppressed Messages ;
++--------------------------------------------+
+The suppressed messages can be found in D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/output_files/2602project.map.smsg.
+
+

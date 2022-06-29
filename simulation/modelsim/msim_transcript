@@ -1,0 +1,205 @@
+# Reading pref.tcl
+# do 2602project_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 2020.1 Lib Mapping Utility 2020.02 Feb 28 2020
+# vmap work rtl_work 
+# Copying D:/QuartusLite/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/Usyd/Dropbox\ (Sydney\ Uni\ Student)/2021\ S1/ELEC\ 2602/Lab/Project\ Final/Project9602 {D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/next_state.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:34:00 on Jun 03,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602" D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/next_state.v 
+# -- Compiling module next_state
+# 
+# Top level modules:
+# 	next_state
+# End time: 12:34:00 on Jun 03,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Usyd/Dropbox\ (Sydney\ Uni\ Student)/2021\ S1/ELEC\ 2602/Lab/Project\ Final/Project9602 {D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myxor.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:34:01 on Jun 03,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602" D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myxor.v 
+# -- Compiling module myxor
+# 
+# Top level modules:
+# 	myxor
+# End time: 12:34:02 on Jun 03,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Usyd/Dropbox\ (Sydney\ Uni\ Student)/2021\ S1/ELEC\ 2602/Lab/Project\ Final/Project9602 {D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myreg.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:34:02 on Jun 03,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602" D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myreg.v 
+# -- Compiling module myreg
+# 
+# Top level modules:
+# 	myreg
+# End time: 12:34:03 on Jun 03,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Usyd/Dropbox\ (Sydney\ Uni\ Student)/2021\ S1/ELEC\ 2602/Lab/Project\ Final/Project9602 {D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myalu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:34:03 on Jun 03,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602" D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myalu.v 
+# -- Compiling module myalu
+# 
+# Top level modules:
+# 	myalu
+# End time: 12:34:04 on Jun 03,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Usyd/Dropbox\ (Sydney\ Uni\ Student)/2021\ S1/ELEC\ 2602/Lab/Project\ Final/Project9602 {D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/tribuf.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:34:04 on Jun 03,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602" D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/tribuf.v 
+# -- Compiling module tribuf
+# 
+# Top level modules:
+# 	tribuf
+# End time: 12:34:05 on Jun 03,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Usyd/Dropbox\ (Sydney\ Uni\ Student)/2021\ S1/ELEC\ 2602/Lab/Project\ Final/Project9602 {D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:34:05 on Jun 03,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602" D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v 
+# -- Compiling module myfsm
+# 
+# Top level modules:
+# 	myfsm
+# End time: 12:34:06 on Jun 03,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Usyd/Dropbox\ (Sydney\ Uni\ Student)/2021\ S1/ELEC\ 2602/Lab/Project\ Final/Project9602 {D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:34:06 on Jun 03,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602" D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v 
+# -- Compiling module mydatapath
+# 
+# Top level modules:
+# 	mydatapath
+# End time: 12:34:07 on Jun 03,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Usyd/Dropbox\ (Sydney\ Uni\ Student)/2021\ S1/ELEC\ 2602/Lab/Project\ Final/Project9602 {D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/one_bit_reg.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:34:07 on Jun 03,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602" D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/one_bit_reg.v 
+# -- Compiling module two_bit_reg
+# ** Warning: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/one_bit_reg.v(8): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# 
+# Top level modules:
+# 	two_bit_reg
+# End time: 12:34:08 on Jun 03,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 1
+# 
+# vlog -vlog01compat -work work +incdir+D:/Usyd/Dropbox\ (Sydney\ Uni\ Student)/2021\ S1/ELEC\ 2602/Lab/Project\ Final/Project9602 {D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/lab_project_TB.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:34:08 on Jun 03,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602" D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/lab_project_TB.v 
+# -- Compiling module lab_project_TB
+# 
+# Top level modules:
+# 	lab_project_TB
+# End time: 12:34:09 on Jun 03,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Usyd/Dropbox\ (Sydney\ Uni\ Student)/2021\ S1/ELEC\ 2602/Lab/Project\ Final/Project9602 {D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myalu.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:34:09 on Jun 03,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602" D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myalu.v 
+# -- Compiling module myalu
+# 
+# Top level modules:
+# 	myalu
+# End time: 12:34:10 on Jun 03,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Usyd/Dropbox\ (Sydney\ Uni\ Student)/2021\ S1/ELEC\ 2602/Lab/Project\ Final/Project9602 {D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:34:10 on Jun 03,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602" D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v 
+# -- Compiling module mydatapath
+# 
+# Top level modules:
+# 	mydatapath
+# End time: 12:34:11 on Jun 03,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Usyd/Dropbox\ (Sydney\ Uni\ Student)/2021\ S1/ELEC\ 2602/Lab/Project\ Final/Project9602 {D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/tribuf.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:34:11 on Jun 03,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602" D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/tribuf.v 
+# -- Compiling module tribuf
+# 
+# Top level modules:
+# 	tribuf
+# End time: 12:34:12 on Jun 03,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Usyd/Dropbox\ (Sydney\ Uni\ Student)/2021\ S1/ELEC\ 2602/Lab/Project\ Final/Project9602 {D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myxor.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:34:12 on Jun 03,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602" D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myxor.v 
+# -- Compiling module myxor
+# 
+# Top level modules:
+# 	myxor
+# End time: 12:34:13 on Jun 03,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Usyd/Dropbox\ (Sydney\ Uni\ Student)/2021\ S1/ELEC\ 2602/Lab/Project\ Final/Project9602 {D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myreg.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:34:13 on Jun 03,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602" D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myreg.v 
+# -- Compiling module myreg
+# 
+# Top level modules:
+# 	myreg
+# End time: 12:34:14 on Jun 03,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/Usyd/Dropbox\ (Sydney\ Uni\ Student)/2021\ S1/ELEC\ 2602/Lab/Project\ Final/Project9602 {D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+# Start time: 12:34:14 on Jun 03,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602" D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/myfsm.v 
+# -- Compiling module myfsm
+# 
+# Top level modules:
+# 	myfsm
+# End time: 12:34:15 on Jun 03,2021, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  lab_project_TB
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" lab_project_TB 
+# Start time: 12:34:15 on Jun 03,2021
+# Loading work.lab_project_TB
+# Loading work.mydatapath
+# Loading work.myfsm
+# Loading work.next_state
+# Loading work.two_bit_reg
+# Loading work.tribuf
+# Loading work.myreg
+# Loading work.myalu
+# Loading work.myxor
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'myxor'.  Expected 4, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /lab_project_TB/dp/myxor File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v Line: 60
+# ** Warning: (vsim-3722) D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v(60): [TFMPC] - Missing connection for port 'enable'.
+# 
+# add wave *
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: yulep  Hostname: DESKTOP-SB2J59F  ProcessID: 19888
+#           Attempting to use alternate WLF file "./wlftmxijwn".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftmxijwn
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1 us
+add wave -position insertpoint  \
+sim:/lab_project_TB/dp/R0/y
+add wave -position insertpoint  \
+sim:/lab_project_TB/dp/R4/y
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'myxor'.  Expected 4, found 3.
+#    Time: 0 ps  Iteration: 0  Instance: /lab_project_TB/dp/myxor File: D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v Line: 60
+# ** Warning: (vsim-3722) D:/Usyd/Dropbox (Sydney Uni Student)/2021 S1/ELEC 2602/Lab/Project Final/Project9602/mydatapath.v(60): [TFMPC] - Missing connection for port 'enable'.
+run
+run
+# End time: 12:45:31 on Jun 03,2021, Elapsed time: 0:11:16
+# Errors: 0, Warnings: 2
